@@ -1,0 +1,21 @@
+# JM 漫画导出 Android 配置（requests 传输层，无 curl_cffi 依赖）
+client:
+  impl: api
+  postman:
+    type: requests
+    proxies: {}
+    retry_times: 3
+  domain:
+    - www.18comic.vip
+    - 18comic.vip
+    - jmcomic1.me
+  cache: false
+download:
+  image:
+    suffix: .jpg
+    decode: false
+  threading:
+    image: 4
+    photo: 4
+dir_rule:
+  base_dir: .
